@@ -5,69 +5,69 @@
       :top="80"
       :left="4"
       title="Door Sensor"
-      :img="DoorSensorImage"
+      :img="icons.doorSensor"
       :controllers="['Call Security', 'Notification']"
     />
     <Sensor
       :top="66"
       :left="40"
       title="Smoke Sensor"
-      :img="SmokeSensorImage"
+      :img="icons.smokeSensor"
       :controllers="['Call Emergency', 'Notification']"
     />
     <Sensor
       :top="28"
       :left="8"
       title="CCTV Camera"
-      :img="CCTVCameraImage"
+      :img="icons.cctvCamera"
       :controllers="['Call Security', 'Notification']"
     />
     <Sensor
       :top="58"
       :right="2"
       title="CCTV Camera"
-      :img="CCTVCameraImage"
+      :img="icons.cctvCamera"
       :controllers="['Call Security', 'Notification']"
     />
     <Sensor
       :top="46"
       :left="68"
       title="Water Leak Sensor"
-      :img="WaterLeakSensorImage"
+      :img="icons.waterLeakSensor"
       :controllers="['Turn Off Water', 'Notification']"
     />
     <Sensor
       :top="68"
       :left="68"
       title="Water Leak Sensor"
-      :img="WaterLeakSensorImage"
+      :img="icons.waterLeakSensor"
       :controllers="['Turn Off Water', 'Notification']"
     />
     <Sensor
       :top="36"
       :left="40"
       title="Wake Up Sensor"
-      :img="WakeUpSensorImage"
+      :img="icons.wakeUpSensor"
       :controllers="['Turn On Music', 'Make Coffee']"
     />
     <RangeSensor
       :top="46"
       :left="10"
       title="Temperature"
-      :img="TemperatureRangeSensorImage"
+      :img="icons.temperatureRangeSensor"
       :controllers="['Turn On Air Condition']"
     />
-    <Controller :top="16" :left="20" title="Call Security" :img="CallSecurityControllerImage" />
-    <Controller :top="16" :right="20" title="Call Emergency" :img="CallEmergencyControllerImage" />
-    <Controller :top="86" :left="34" title="Notification" :img="NotificationControllerImage" />
-    <Controller :top="86" :left="60" title="Turn Off Water" :img="TurnOffWaterControllerImage" />
-    <Controller :top="56" :left="52" title="Turn On Music" :img="TurnOnMusicControllerImage" />
-    <Controller :top="76" :left="48" title="Make Coffee" :img="MakeCoffeeControllerImage" />
+    <Controller :top="16" :left="20" title="Call Security" :img="icons.callSecurityController" />
+    <Controller :top="16" :right="20" title="Call Emergency" :img="icons.callEmergencyController" />
+    <Controller :top="86" :left="34" title="Notification" :img="icons.notificationController" />
+    <Controller :top="86" :left="60" title="Turn Off Water" :img="icons.turnOffWaterController" />
+    <Controller :top="56" :left="52" title="Turn On Music" :img="icons.turnOnMusicController" />
+    <Controller :top="76" :left="48" title="Make Coffee" :img="icons.makeCoffeeController" />
     <Controller
       :top="70"
       :left="8"
       title="Turn On Air Condition"
-      :img="TurnOnAirConditionControllerImage"
+      :img="icons.turnOnAirConditionController"
       :activateWhenGreaterThan="25"
     />
   </div>
@@ -77,19 +77,7 @@
 import Sensor from "./Sensor";
 import RangeSensor from "./RangeSensor";
 import Controller from "./Controller";
-import SmokeSensorImage from "../assets/smoke-sensor.svg";
-import DoorSensorImage from "../assets/door-sensor.svg";
-import CCTVCameraImage from "../assets/cctv-camera.svg";
-import WaterLeakSensorImage from "../assets/water-leak-sensor.svg";
-import WakeUpSensorImage from "../assets/wake-up-sensor.svg";
-import TemperatureRangeSensorImage from "../assets/temperature-range-sensor.svg";
-import CallSecurityControllerImage from "../assets/call-security-controller.svg";
-import CallEmergencyControllerImage from "../assets/call-emergency-controller.svg";
-import NotificationControllerImage from "../assets/notification-controller.svg";
-import TurnOffWaterControllerImage from "../assets/turn-off-water-controller.svg";
-import TurnOnMusicControllerImage from "../assets/turn-on-music-controller.svg";
-import MakeCoffeeControllerImage from "../assets/make-coffee-controller.svg";
-import TurnOnAirConditionControllerImage from "../assets/turn-on-air-condition-controller.svg";
+import icons from "../assets/icons";
 
 export default {
   name: "Home",
@@ -99,44 +87,8 @@ export default {
     Controller
   },
   computed: {
-    SmokeSensorImage() {
-      return SmokeSensorImage;
-    },
-    DoorSensorImage() {
-      return DoorSensorImage;
-    },
-    CCTVCameraImage() {
-      return CCTVCameraImage;
-    },
-    WaterLeakSensorImage() {
-      return WaterLeakSensorImage;
-    },
-    WakeUpSensorImage() {
-      return WakeUpSensorImage;
-    },
-    TemperatureRangeSensorImage() {
-      return TemperatureRangeSensorImage;
-    },
-    NotificationControllerImage() {
-      return NotificationControllerImage;
-    },
-    CallSecurityControllerImage() {
-      return CallSecurityControllerImage;
-    },
-    CallEmergencyControllerImage() {
-      return CallEmergencyControllerImage;
-    },
-    TurnOffWaterControllerImage() {
-      return TurnOffWaterControllerImage;
-    },
-    TurnOnMusicControllerImage() {
-      return TurnOnMusicControllerImage;
-    },
-    MakeCoffeeControllerImage() {
-      return MakeCoffeeControllerImage;
-    },
-    TurnOnAirConditionControllerImage() {
-      return TurnOnAirConditionControllerImage;
+    icons() {
+      return icons;
     }
   }
 };
