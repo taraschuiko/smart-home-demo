@@ -20,7 +20,9 @@ export default {
     left: Number,
     right: Number,
     title: String,
-    img: String
+    img: String,
+    activateWhenGreaterThan: Number,
+    activateWhenLessThan: Number
   },
   computed: {
     positionStyle() {
@@ -32,6 +34,14 @@ export default {
       if (data.controllers.includes(this.title)) {
         this.activated = true
         setTimeout(() => {this.activated = false}, 1000)
+      }
+    })
+    eventBus.$on("rangeSensorChanged", data => {
+      if (data.controllers.includes(this.title)) {
+        if (data.value > this.activateWhenGreaterThan || data.value < this.activateWhenLessThan) {
+          this.activated = true
+          setTimeout(() => {this.activated = false}, 1000)
+        }
       }
     })
   }

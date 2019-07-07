@@ -50,34 +50,52 @@
       :img="WakeUpSensorImage"
       :controllers="['Turn On Music', 'Make Coffee']"
     />
+    <RangeSensor
+      :top="46"
+      :left="10"
+      title="Temperature"
+      :img="TemperatureRangeSensorImage"
+      :controllers="['Turn On Air Condition']"
+    />
     <Controller :top="16" :left="20" title="Call Security" :img="CallSecurityControllerImage" />
     <Controller :top="16" :right="20" title="Call Emergency" :img="CallEmergencyControllerImage" />
     <Controller :top="86" :left="34" title="Notification" :img="NotificationControllerImage" />
     <Controller :top="86" :left="60" title="Turn Off Water" :img="TurnOffWaterControllerImage" />
     <Controller :top="56" :left="52" title="Turn On Music" :img="TurnOnMusicControllerImage" />
     <Controller :top="76" :left="48" title="Make Coffee" :img="MakeCoffeeControllerImage" />
+    <Controller
+      :top="70"
+      :left="8"
+      title="Turn On Air Condition"
+      :img="TurnOnAirConditionControllerImage"
+      :activateWhenGreaterThan="25"
+    />
   </div>
 </template>
 
 <script>
 import Sensor from "./Sensor";
+import RangeSensor from "./RangeSensor";
 import Controller from "./Controller";
 import SmokeSensorImage from "../assets/smoke-sensor.svg";
 import DoorSensorImage from "../assets/door-sensor.svg";
 import CCTVCameraImage from "../assets/cctv-camera.svg";
 import WaterLeakSensorImage from "../assets/water-leak-sensor.svg";
 import WakeUpSensorImage from "../assets/wake-up-sensor.svg";
+import TemperatureRangeSensorImage from "../assets/temperature-range-sensor.svg";
 import CallSecurityControllerImage from "../assets/call-security-controller.svg";
 import CallEmergencyControllerImage from "../assets/call-emergency-controller.svg";
 import NotificationControllerImage from "../assets/notification-controller.svg";
 import TurnOffWaterControllerImage from "../assets/turn-off-water-controller.svg";
 import TurnOnMusicControllerImage from "../assets/turn-on-music-controller.svg";
 import MakeCoffeeControllerImage from "../assets/make-coffee-controller.svg";
+import TurnOnAirConditionControllerImage from "../assets/turn-on-air-condition-controller.svg";
 
 export default {
   name: "Home",
   components: {
     Sensor,
+    RangeSensor,
     Controller
   },
   computed: {
@@ -96,6 +114,9 @@ export default {
     WakeUpSensorImage() {
       return WakeUpSensorImage;
     },
+    TemperatureRangeSensorImage() {
+      return TemperatureRangeSensorImage;
+    },
     NotificationControllerImage() {
       return NotificationControllerImage;
     },
@@ -113,6 +134,9 @@ export default {
     },
     MakeCoffeeControllerImage() {
       return MakeCoffeeControllerImage;
+    },
+    TurnOnAirConditionControllerImage() {
+      return TurnOnAirConditionControllerImage;
     }
   }
 };
