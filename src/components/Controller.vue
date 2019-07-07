@@ -41,8 +41,8 @@ export default {
 
 <style lang="scss" scoped>
 .controller {
-  background: #fff;
-  border: 2px solid #ccc;
+  background: #ccc;
+  border: 2px solid #fff;
   border-radius: 16px;
   padding: 8px 16px;
   display: flex;
