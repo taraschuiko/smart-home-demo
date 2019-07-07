@@ -1,29 +1,38 @@
 <template>
   <div id="app">
-    <Home/>
+    <Header/>
+    <Home />
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Header from "./components/Header"
+import Home from "./components/Home.vue"
 
 export default {
   name: "App",
   components: {
+    Header,
     Home
   }
-}
+};
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  overflow-x: scroll;
   width: 100vw;
   height: 100vh;
+
+  .container {
+    overflow-x: scroll;
+    // width: 100%;
+    height: 100%;
+    padding: 8px;
+  }
 }
 </style>

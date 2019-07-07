@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img src="../assets/smart-home.svg" alt="Smart Home" class="home__background">
-    <Sensor top="430" left="570" title="Smoke Sensor" :img="SmokeSensorImage"/>
+    <Sensor top="70" left="40" title="Smoke Sensor" :img="SmokeSensorImage"/>
   </div>
 </template>
 
@@ -24,15 +24,14 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  height: 100%;
-  width: 100%;
   position: relative;
+  max-width: 960px;
+  min-width: 720px;
+  margin: 0 auto;
+  padding: 100px 10px 0 10px;
   
   &__background {
-    height: 720px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
   }
 }
 </style>

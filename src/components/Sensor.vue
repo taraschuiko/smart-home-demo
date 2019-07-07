@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     positionStyle() {
-      return `position: absolute; top: ${this.top}px; left: ${this.left}px`
+      return `position: absolute; top: ${this.top}%; left: ${this.left}%`
     }
   }
 }
