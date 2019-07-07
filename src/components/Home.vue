@@ -9,7 +9,7 @@
       :controllers="['Call Security', 'Notification']"
     />
     <Sensor
-      :top="70"
+      :top="66"
       :left="40"
       title="Smoke Sensor"
       :img="SmokeSensorImage"
@@ -43,10 +43,19 @@
       :img="WaterLeakSensorImage"
       :controllers="['Turn Off Water', 'Notification']"
     />
+    <Sensor
+      :top="36"
+      :left="40"
+      title="Wake Up Sensor"
+      :img="WakeUpSensorImage"
+      :controllers="['Turn On Music', 'Make Coffee']"
+    />
     <Controller :top="16" :left="20" title="Call Security" :img="CallSecurityControllerImage" />
     <Controller :top="16" :right="20" title="Call Emergency" :img="CallEmergencyControllerImage" />
     <Controller :top="86" :left="34" title="Notification" :img="NotificationControllerImage" />
     <Controller :top="86" :left="60" title="Turn Off Water" :img="TurnOffWaterControllerImage" />
+    <Controller :top="56" :left="52" title="Turn On Music" :img="TurnOnMusicControllerImage" />
+    <Controller :top="76" :left="48" title="Make Coffee" :img="MakeCoffeeControllerImage" />
   </div>
 </template>
 
@@ -57,10 +66,13 @@ import SmokeSensorImage from "../assets/smoke-sensor.svg";
 import DoorSensorImage from "../assets/door-sensor.svg";
 import CCTVCameraImage from "../assets/cctv-camera.svg";
 import WaterLeakSensorImage from "../assets/water-leak-sensor.svg";
+import WakeUpSensorImage from "../assets/wake-up-sensor.svg";
 import CallSecurityControllerImage from "../assets/call-security-controller.svg";
 import CallEmergencyControllerImage from "../assets/call-emergency-controller.svg";
 import NotificationControllerImage from "../assets/notification-controller.svg";
 import TurnOffWaterControllerImage from "../assets/turn-off-water-controller.svg";
+import TurnOnMusicControllerImage from "../assets/turn-on-music-controller.svg";
+import MakeCoffeeControllerImage from "../assets/make-coffee-controller.svg";
 
 export default {
   name: "Home",
@@ -81,6 +93,9 @@ export default {
     WaterLeakSensorImage() {
       return WaterLeakSensorImage;
     },
+    WakeUpSensorImage() {
+      return WakeUpSensorImage;
+    },
     NotificationControllerImage() {
       return NotificationControllerImage;
     },
@@ -92,6 +107,12 @@ export default {
     },
     TurnOffWaterControllerImage() {
       return TurnOffWaterControllerImage;
+    },
+    TurnOnMusicControllerImage() {
+      return TurnOnMusicControllerImage;
+    },
+    MakeCoffeeControllerImage() {
+      return MakeCoffeeControllerImage;
     }
   }
 };
