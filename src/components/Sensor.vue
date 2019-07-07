@@ -1,5 +1,5 @@
 <template>
-  <div class="sensor" :style="positionStyle">
+  <div class="sensor" :style="positionStyle" @click="activate">
     <img :src="img" alt="Sensor">
     {{title}}
   </div>
@@ -11,12 +11,18 @@ export default {
   props: {
     top: Number,
     left: Number,
+    right: Number,
     title: String,
     img: String
   },
+  methods: {
+    activate() {
+      alert("activated")
+    }
+  },
   computed: {
     positionStyle() {
-      return `position: absolute; top: ${this.top}%; left: ${this.left}%`
+      return `position: absolute; top: ${this.top}%; left: ${this.left}%; right: ${this.right}%;`
     }
   }
 }
