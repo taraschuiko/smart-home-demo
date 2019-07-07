@@ -1,6 +1,6 @@
 <template>
-  <div class="sensor" :style="positionStyle" @click="activate">
-    <img :src="img" alt="Sensor">
+  <div class="controller" :style="positionStyle" :class="activated && 'controller--activated'">
+    <img :src="img" alt="Controller">
     {{title}}
   </div>
 </template>
@@ -9,43 +9,47 @@
 import {eventBus} from "../main"
 
 export default {
-  name: "Sensor",
+  name: "Controller",
+  data() {
+    return {
+      activated: false
+    }
+  },
   props: {
     top: Number,
     left: Number,
     right: Number,
     title: String,
-    img: String,
-    controllers: Array
-  },
-  methods: {
-    activate() {
-      eventBus.$emit("sensorActivated", {
-        sensor: this.title,
-        controllers: this.controllers
-      })
-    }
+    img: String
   },
   computed: {
     positionStyle() {
       return `position: absolute; top: ${this.top}%; left: ${this.left}%; right: ${this.right}%;`
     }
+  },
+  created() {
+    eventBus.$on("sensorActivated", data => {
+      if (data.controllers.includes(this.title)) {
+        this.activated = true
+        setTimeout(() => {this.activated = false}, 1000)
+      }
+    })
   }
 }
 </script>
 
+
 <style lang="scss" scoped>
-.sensor {
+.controller {
   background: #fff;
   border: 2px solid #ccc;
   border-radius: 16px;
   padding: 8px 16px;
-  cursor: pointer;
   display: flex;
   align-items: center;
 
-  &:hover {
-    background: #ccc;
+  &--activated {
+    background: #ffaf38;
   }
 
   img {
