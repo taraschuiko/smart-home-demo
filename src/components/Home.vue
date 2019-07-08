@@ -5,69 +5,69 @@
       :top="80"
       :left="4"
       title="Door Sensor"
-      :img="icons.doorSensor"
+      icon="g"
       :controllers="['Call Security', 'Notification']"
     />
     <Sensor
       :top="66"
       :left="40"
       title="Smoke Sensor"
-      :img="icons.smokeSensor"
+      icon="l"
       :controllers="['Call Emergency', 'Notification']"
     />
     <Sensor
       :top="28"
       :left="8"
       title="CCTV Camera"
-      :img="icons.cctvCamera"
+      icon="e"
       :controllers="['Call Security', 'Notification']"
     />
     <Sensor
       :top="58"
       :right="2"
       title="CCTV Camera"
-      :img="icons.cctvCamera"
+      icon="e"
       :controllers="['Call Security', 'Notification']"
     />
     <Sensor
       :top="46"
       :left="68"
       title="Water Leak Sensor"
-      :img="icons.waterLeakSensor"
+      icon="b"
       :controllers="['Turn Off Water', 'Notification']"
     />
     <Sensor
       :top="68"
       :left="68"
       title="Water Leak Sensor"
-      :img="icons.waterLeakSensor"
+      icon="b"
       :controllers="['Turn Off Water', 'Notification']"
     />
     <Sensor
       :top="36"
       :left="40"
       title="Wake Up Sensor"
-      :img="icons.wakeUpSensor"
+      icon="c"
       :controllers="['Turn On Music', 'Make Coffee']"
     />
     <RangeSensor
       :top="46"
       :left="10"
       title="Temperature"
-      :img="icons.temperatureRangeSensor"
+      icon="k"
       :controllers="['Turn On Air Condition']"
     />
-    <Controller :top="16" :left="20" title="Call Security" :img="icons.callSecurityController" />
-    <Controller :top="16" :right="20" title="Call Emergency" :img="icons.callEmergencyController" />
-    <Controller :top="86" :left="34" title="Notification" :img="icons.notificationController" />
-    <Controller :top="86" :left="60" title="Turn Off Water" :img="icons.turnOffWaterController" />
-    <Controller :top="56" :left="50" title="Turn On Music" :img="icons.turnOnMusicController" />
-    <Controller :top="76" :left="48" title="Make Coffee" :img="icons.makeCoffeeController" />
+    <Controller :top="16" :left="20" title="Call Security" icon="j" />
+    <Controller :top="16" :right="20" title="Call Emergency" icon="h" />
+    <Controller :top="86" :left="34" title="Notification" icon="d" />
+    <Controller :top="86" :left="60" title="Turn Off Water" icon="m" />
+    <Controller :top="56" :left="50" title="Turn On Music" icon="i" />
+    <Controller :top="76" :left="48" title="Make Coffee" icon="f" />
     <Controller
       :top="70"
       :left="8"
       title="Turn On Air Condition"
-      :img="icons.turnOnAirConditionController"
+      icon="a"
       :activateWhenGreaterThan="25"
     />
   </div>
@@ -77,7 +77,6 @@
 import Sensor from "./Sensor";
 import RangeSensor from "./RangeSensor";
 import Controller from "./Controller";
-import icons from "../assets/icons";
 
 export default {
   name: "Home",
@@ -85,11 +84,6 @@ export default {
     Sensor,
     RangeSensor,
     Controller
-  },
-  computed: {
-    icons() {
-      return icons;
-    }
   }
 };
 </script>
@@ -101,7 +95,7 @@ export default {
   max-width: 960px;
   min-width: 720px;
   margin: 0 auto;
-  padding: 100px 16px 16px 16px;
+  padding: 116px 16px 16px 16px;
 
   &__background {
     width: 100%;
