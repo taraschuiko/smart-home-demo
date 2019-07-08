@@ -12,12 +12,14 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  width: calc(100% - 8px * 2);
   background: #fff;
   padding: 8px;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid #ccc;
-  z-index: 999;
+  z-index: 100;
 
   h1 {
     padding: 0;

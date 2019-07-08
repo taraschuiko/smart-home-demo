@@ -61,7 +61,7 @@
     <Controller :top="16" :right="20" title="Call Emergency" :img="icons.callEmergencyController" />
     <Controller :top="86" :left="34" title="Notification" :img="icons.notificationController" />
     <Controller :top="86" :left="60" title="Turn Off Water" :img="icons.turnOffWaterController" />
-    <Controller :top="56" :left="52" title="Turn On Music" :img="icons.turnOnMusicController" />
+    <Controller :top="56" :left="50" title="Turn On Music" :img="icons.turnOnMusicController" />
     <Controller :top="76" :left="48" title="Make Coffee" :img="icons.makeCoffeeController" />
     <Controller
       :top="70"
@@ -97,10 +97,11 @@ export default {
 <style lang="scss" scoped>
 .home {
   position: relative;
+  width: 100%;
   max-width: 960px;
   min-width: 720px;
   margin: 0 auto;
-  padding: 100px 10px 0 10px;
+  padding: 100px 16px 16px 16px;
 
   &__background {
     width: 100%;
