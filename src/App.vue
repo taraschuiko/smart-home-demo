@@ -33,38 +33,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   width: 100%;
+
   .icon {
     font-family: icons;
+    margin-right: 8px;
+    font-size: 18px;
   }
 
   .container {
     overflow-x: scroll;
     height: 100%;
     padding: 8px;
-  }
-
-  .sensor,
-  .controller {
-    background: #fff;
-    border: 2px solid #ccc;
-    border-radius: 16px;
-    padding: 8px 16px;
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 20px;
-      margin-right: 8px;
-    }
-
-    input {
-      margin: 0 8px;
-    }
-
-    .icon {
-      font-size: 18px;
-      margin-right: 8px;
-    }
   }
 }
 </style>

@@ -54,3 +54,23 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.controller {
+  background: #ccc;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  
+  &--activated {
+    background: #ffaf38;
+  }
+
+  img {
+    width: 20px;
+    margin-right: 8px;
+  }
+}
+</style>

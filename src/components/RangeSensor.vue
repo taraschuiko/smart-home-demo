@@ -41,3 +41,23 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.sensor {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 20px;
+    margin-right: 8px;
+  }
+  
+  input {
+    margin: 0 8px;
+  }
+}
+</style>

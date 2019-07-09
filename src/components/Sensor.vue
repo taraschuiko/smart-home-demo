@@ -33,3 +33,24 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.sensor {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: #ccc;
+  }
+  
+  img {
+    width: 20px;
+    margin-right: 8px;
+  }
+}
+</style>
